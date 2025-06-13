@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mist">
+
+  <div id="typewriter"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a href="Option 1.html"><button id="lagg">Ignore Them and Enter</button></a>
+  <a href="Option 2.html"><button id="laggg">Pass By</button></a>
+  <br>
+    <script>
+    const text = 'You come across a house surrounded by dark mist...\n"Do not go in there!\nThe house gets deLIGHTed when people enter..."\nA mysterious person whispers to you...';
+    const speed = 100; // typing speed in milliseconds
+    let i = 0;
+    const lagg = document.getElementById("lagg");
+    const laggg = document.getElementById("laggg");
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        lagg.style.opacity = '0.75';
+        laggg.style.opacity = '0.05';
+      }
+    }
+
+    // Start typing after DOM loads
+    window.onload = typeWriter;
+    </script>
+</body>
+</html>

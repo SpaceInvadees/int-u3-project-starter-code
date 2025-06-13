@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="hell">
+
+  <div id="typewriter"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a href="beginning.html"><button id="lagg">Retry</button></a>
+    <script>
+    const text = 'WELCOME TO HELL.';
+    const speed = 500; // typing speed in milliseconds
+    let i = 0;
+    const lagg = document.getElementById("lagg");
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        lagg.style.opacity = '0.25';
+      }
+    }
+
+    // Start typing after DOM loads
+    window.onload = typeWriter;
+    </script>
+</body>
+</html>

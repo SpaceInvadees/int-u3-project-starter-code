@@ -10,6 +10,78 @@
 */
 
 
+.begin {
+    height: 100vh;
+    margin: 0;
+    background-image: radial-gradient(circle at center, rgb(78, 8, 8), rgb(47, 2, 47), black);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }  
+
+.mist {
+    height: 100vh;
+    margin: 0;
+    background-image: radial-gradient(circle at center, rgb(76, 11, 104), rgb(24, 2, 24), black);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sky {
+    height: 100vh;
+    margin: 0;
+    background-image: radial-gradient(circle at center, rgb(144, 168, 48), rgb(120, 120, 120), rgb(69, 148, 204));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.street {
+    height: 100vh;
+    margin: 0;
+    background-image: radial-gradient(circle at center, rgb(59, 70, 18), rgb(47, 47, 47), rgb(26, 56, 77));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back {
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hell {
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: hot;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+}
+
+@keyframes hot {
+    0% {background-color: rgb(139, 48, 48);}
+    25% {background-color: rgb(147, 9, 9);}
+    50% {background-color: rgb(178, 122, 17);}
+    75% {background-color: red;}
+    100% {background-color: black;}
+}
+
+img {
+    width: 30%;
+    align-self: center;
+    opacity: 0.5;
+}
+
+#typewriter {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    white-space: pre;
+    color: white;
+    font-size: 60px;
+    width:100%;
+  }
 /* Feel free to change any of the styling below!*/
 html,
 body {
@@ -25,6 +97,11 @@ body {
     padding: 20px;
 }
 
+#lagg, #laggg, #door {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  
 /* Style the title of your story */
 .title {
     font-size: 24px;
@@ -64,7 +141,7 @@ button {
     font-size: 16px;
     padding: 10px 20px;
     margin: 10px;
-    background-color: #007bff;
+    background-color: #5c2525;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -73,7 +150,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    font-size: 125%;
 }
 
 /* Style the screens for option one and option two */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="street">
+
+  <div id="typewriter"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a href="End 1.html"><button id="lagg">Continue</button></a>
+    <script>
+    const text = 'You heed the warnings of the person \nand walk past the mansion.\n\n\n\nThe mist immediately begins to vanish...';
+    const speed = 100; // typing speed in milliseconds
+    let i = 0;
+    const lagg = document.getElementById("lagg");
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        lagg.style.opacity = '0.5';
+      }
+    }
+
+    // Start typing after DOM loads
+    window.onload = typeWriter;
+    </script>
+</body>
+</html>

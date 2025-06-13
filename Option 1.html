@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="back">
+
+  <div id="typewriter"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a href="End 2.html"><img id="door" src="data:image/jpeg;base64,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"></img></a>
+    <script>
+    const text = 'You ignore their warning and enter the mansion.\nImmediately the mist surrounds you...\n\n\n\nYou are unable to sense anything, save for a door.';
+    const speed = 100; // typing speed in milliseconds
+    let i = 0;
+    const door = document.getElementById("door");
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        door.style.opacity = '0.5';
+      }
+    }
+
+    // Start typing after DOM loads
+    window.onload = typeWriter;
+    </script>
+</body>
+</html>
